@@ -1,0 +1,22 @@
+#include <reg51.h>
+sbit s=P3^0;//定义按键，接入引脚
+void delay(void)
+{
+  unsigned char i,j;
+  for(i=0;i<200;i++)
+  for(j=0;j<250;J++)  
+}
+void main(void)
+{
+  unsigned char i;
+  i=0;
+  while(1)
+  {
+    if(s==0)//判断是否被按下，=0，按下
+    delay();//延时消除键盘抖动
+    if(s==0)//再次判断是否被按下
+    i++;
+    if(i==9)
+    i=1;
+  }
+}
